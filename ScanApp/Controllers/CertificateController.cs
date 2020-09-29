@@ -18,7 +18,7 @@ using iText.Signatures;
 
 namespace ScanApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]")] 
     [ApiController]
     public class CertificateController : ControllerBase
     {
@@ -26,6 +26,7 @@ namespace ScanApp.Controllers
         [HttpGet]
         public bool GeneratePDF()
         {
+            //Generate certificates
             generateCert();
             return true;
             

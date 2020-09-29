@@ -21,7 +21,8 @@ import { GeneratepdfComponent } from './generatepdf/generatepdf.component';
     CounterComponent,
     FetchDataComponent,
     PdfviewComponent,
-    
+
+
     GeneratepdfComponent,
     
   ],

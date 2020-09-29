@@ -11,6 +11,8 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { PdfviewComponent } from './pdfview/pdfview/pdfview.component';
 
+import { GeneratepdfComponent } from './generatepdf/generatepdf.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +21,8 @@ import { PdfviewComponent } from './pdfview/pdfview/pdfview.component';
     CounterComponent,
     FetchDataComponent,
     PdfviewComponent,
+    
+    GeneratepdfComponent,
     
   ],
   imports: [
@@ -31,6 +35,8 @@ import { PdfviewComponent } from './pdfview/pdfview/pdfview.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'pdfview', component: PdfviewComponent },
+
+      { path: 'generateform', component: GeneratepdfComponent },
 
     ])
 

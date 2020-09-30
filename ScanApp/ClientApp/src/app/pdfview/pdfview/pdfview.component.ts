@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PdfviewComponent implements OnInit {
 
-  src = "/assets/5678.pdf";
+  src = "/assets/forms/5678.pdf";
   constructor() { }
 
   ngOnInit() {

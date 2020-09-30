@@ -12,23 +12,32 @@ using iTextSharp.text.pdf.security;
 using System.IO;
 using System.Text;
 using iText.Signatures;
+using Microsoft.AspNetCore.Hosting;
 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace ScanApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class CertificateController : ControllerBase
     {
+
+
+        private readonly IHostingEnvironment _hostingEnvironment;
+
+        public CertificateController(IHostingEnvironment hostingEnvironment)
+        {
+            _hostingEnvironment = hostingEnvironment;
+        }
+
         // GET: api/<CertificateController>
-        [HttpGet]
-        public bool GeneratePDF()
+        [HttpGet("{GeneratePDF}")]
+        public bool GeneratePDFForm()
         {
             generateCert();
             return true;
-
         }
 
         private void generateCert()
@@ -60,14 +69,13 @@ namespace ScanApp.Controllers
             }
         }
 
-        static void SignatureFiledswithPDFFormField(SqlDataReader rdr)
+        private void SignatureFiledswithPDFFormField(SqlDataReader rdr)
         {
-            string strOutputFilePath = rdr["Certificate_Number"].ToString() + ".pdf";
+            string strOutputFilePath = _hostingEnvironment.WebRootPath+ "\\assets\\forms\\" + rdr["Certificate_Number"].ToString() + ".pdf";
             Rectangle rect = new Rectangle(1100, 1400);
             Document document = new Document(PageSize.LETTER.Rotate(), 0, 0, 0, 0);
             document.SetMargins(0, 0, 5, 5);
             PdfWriter writer;
-
 
             writer = PdfWriter.GetInstance(document, new FileStream(strOutputFilePath, FileMode.Create));
             document.Open();
@@ -112,10 +120,10 @@ namespace ScanApp.Controllers
 
         }
 
-        static string getHTMLString(SqlDataReader rdr)
+        private string getHTMLString(SqlDataReader rdr)
         {
 
-            var template = new HtmlTemplate("ksbtemplate.html");
+            var template = new HtmlTemplate(_hostingEnvironment.WebRootPath +"\\assets\\templates\\ksbtemplate.html");
             string output = template.Render(new
             {
                 CERTIFICATE_NUMBER = rdr["Certificate_Number"].ToString(),
@@ -132,7 +140,6 @@ namespace ScanApp.Controllers
             });
 
             return output;
-
         }
 
         private void ReadSignatureFileds()
@@ -153,29 +160,7 @@ namespace ScanApp.Controllers
 
         }
 
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<CertificateController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<CertificateController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<CertificateController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+       
     }
 
     public class HtmlTemplate

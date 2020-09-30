@@ -1,0 +1,278 @@
+<html>
+<style>
+    
+    .content {
+        max-width: 900px;
+        margin: auto;
+        background: white;
+        padding: 10px;
+    }
+
+    .cell-center {
+        text-align: center;
+    }
+    .cell-border {
+        padding-left:5px;
+        border-bottom:1px solid black; 
+        border-top:1px 1px solid black;
+    }
+    .cell-border-left {
+        padding-left: 5px;
+        border-bottom: 1px solid black;
+        border-top: 1px 1px solid black;
+        border-left: 1px solid black;
+    }
+    .cell-border-bottom {
+        padding-left: 5px;
+        border-bottom: 1px solid black;
+    }
+
+    .cell-border-left-bottom {
+        padding-left: 5px;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+    }
+
+    .cell-border-left-bottom-top {
+        padding-left: 5px;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+    }
+    .label-font{
+    }
+
+</style>
+
+<body>
+    <div>
+        <table border=0 style="width:100%;border-style: none;border-spacing: 0px 0px;border-bottom:none;border-top:none;">
+            <tr>
+                <td style="text-align:center;padding-bottom:10px;padding-top:10px;border-bottom:1px 1px solid black" colspan="2">
+                    KSB LIMITED <br />
+                    151, METTUPALAYAM ROAD,<br />
+                    N.S.N. PALAYAM - POST,<br />
+                    COIMBATORE - 641 031. (INDIA)<br />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;padding-bottom:1px;padding-top: 10px;" colspan="2">
+                    FORM III - C<br />
+                    CERTIFICATE OF MANUFACTURE AND TEST OF BOILER MOUNTINGS AND FITTINGS<br />
+                    (Regulation 4(g))
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;" width="45%">
+                    <table border=0 style="vertical-align: top;width:100%;border-style: none;border-spacing: 0px 0px;border-bottom-color: white;border-top-color:white;">
+                        <tr>
+                            <td class="cell-border label-font">Certificate No. {CERTIFICATE_NUMBER}</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-bottom label-font">Design Pressure in Kg/Cm<sup>2</sup>: {DESIGN_PRESSURE}</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-bottom label-font">Drawing No. {DRAWING_NUMBER}</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-bottom label-font" height="97px">Name of Part :</td>
+                        </tr>
+                        <tr>
+                            <td  class="cell-border-bottom label-font" height="99px">Makers Name and Address:<br />{}</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-bottom label-font" style="height: 96px;vertical-align: top;">Customer's Name & Address:<br /> {}</td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="vertical-align: top;">
+                    <table border=0 style="vertical-align: top;width:100%;border-style: none;border-spacing: 0px 0px;">
+                        <tr>
+                            <td align="right" class="cell-border label-font" width="60%">Date: </td>
+                            <td class="cell-border-left" width="40%">{DATE}</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-left-bottom label-font">Hydraulic Test Pressure in Kg/Cm:</td>
+                            <td class="cell-border-left-bottom label-font">{TEST_PRESSURE}</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-left-bottom label-font">Main Dimensions </td>
+                            <td class="cell-border-left-bottom label-font">{MAIN_DIMENSIONS}</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-left-bottom label-font">Valve Specification</td>
+                            <td class="cell-border-left-bottom label-font">{}</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-left-bottom label-font" colspan="2">RAW MATERAIL</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-left-bottom label-font">Size</td>
+                            <td class="cell-border-left-bottom label-font">{SIZE}</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-left-bottom label-font">Specification</td>
+                            <td class="cell-border-left-bottom label-font">{SPECIFICATION}</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-left-bottom label-font">Heat Number</td>
+                            <td class="cell-border-left-bottom label-font">{HEAT_NUMBER}</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-left-bottom label-font">Process of Manufacture</td>
+                            <td class="cell-border-left-bottom label-font">{}</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-left-bottom label-font">Test Certificate No. & Date</td>
+                            <td class="cell-border-left-bottom label-font">{}</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-left-bottom label-font">Name of the Maker</td>
+                            <td class="cell-border-left-bottom label-font">{MAKER_NAME}</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-left-bottom label-font">Name of Inspecting Authority</td>
+                            <td class="cell-border-left-bottom label-font">{}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;padding-bottom:5px;padding-top:5px;border-bottom:1px 1px solid black" colspan="2">Design Temperature (°C) & Design Pressure (Kg/Cm<sup>2</sup>) • as per below table</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table border=0 style="vertical-align: top;width:100%;border-style: none;border-spacing: 0px 0px;">
+                        <tr>
+                            <td class="cell-border-bottom label-font" width="25%">Metal Temperature (°C)</td>
+                            <td class="cell-border-left-bottom label-font" width="6%">{}</td>
+                            <td class="cell-border-left-bottom label-font" width="6%">{}</td>
+                            <td class="cell-border-left-bottom label-font" width="6%">{}</td>
+                            <td class="cell-border-left-bottom label-font" width="6%">{}</td>
+                            <td class="cell-border-left-bottom label-font" width="6%">{}</td>
+                            <td class="cell-border-left-bottom label-font" width="6%">{}</td>
+                            <td class="cell-border-left-bottom label-font" width="6%">{}</td>
+                            <td class="cell-border-left-bottom label-font" width="6%">{}</td>
+                            <td class="cell-border-left-bottom label-font" width="6%">{}</td>
+                            <td class="cell-border-left-bottom label-font" width="6%">{}</td>
+
+                        </tr>
+                        <tr>
+                            <td class="cell-border-bottom" width="25%">Maximum Allowable WorkingPressure in ( Kg/CM<sup>2</sup>)</td>
+                            <td class="cell-border-left-bottom">{}</td>
+                            <td class="cell-border-left-bottom">{}</td>
+                            <td class="cell-border-left-bottom">{}</td>
+                            <td class="cell-border-left-bottom">{}</td>
+                            <td class="cell-border-left-bottom">{}</td>
+                            <td class="cell-border-left-bottom">{}</td>
+                            <td class="cell-border-left-bottom">{}</td>
+                            <td class="cell-border-left-bottom">{}</td>
+                            <td class="cell-border-left-bottom">{}</td>
+                            <td class="cell-border-left-bottom">{}</td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table border=0 style="vertical-align: top;width:100%;border-style: none;border-spacing: 0px 0px;">
+                        <tr>
+                            <td class="cell-border-bottom" width="100">Heat Number</td>
+                            <td class="cell-border-left-bottom"></td>
+                            <td class="cell-border-left-bottom" style="border-right: 1px solid black;"></td>
+                            <td class="cell-border-left-bottom" style="border-right: 1px solid black;" colspan=6 class="cell-center"> %CHEMICAL COMPOSITION</td>
+                            <td class="cell-border-left-bottom" colspan=4 class="cell-center">PHYSICAL TEST RESULTS</td>
+                            <td class="cell-border-left-bottom"></td>
+                            <td class="cell-border-left-bottom"></td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-bottom"></td>
+                            <td width="45" class="cell-center cell-border-left-bottom">C</td>
+                            <td width="45" class="cell-center cell-border-left-bottom">Mn</td>
+                            <td width="45" class="cell-center cell-border-left-bottom-top">Si</td>
+                            <td width="45" class="cell-center cell-border-left-bottom-top">P</td>
+                            <td width="45" class="cell-center cell-border-left-bottom-top">S</td>
+                            <td width="45" class="cell-center cell-border-left-bottom-top">Cr</td>
+                            <td width="45" class="cell-center cell-border-left-bottom-top">Mo</td>
+                            <td width="45" class="cell-center cell-border-left-bottom-top">Ni</td>
+                            <td width="45" class="cell-center cell-border-left-bottom-top">UTS Kg/mm<sup>2</sup></td>
+                            <td width="50" class="cell-center cell-border-left-bottom-top">%E GL: 50mm</td>
+                            <td width="45" class="cell-center cell-border-left-bottom-top">Bend Test 180</td>
+                            <td width="45" class="cell-center cell-border-left-bottom-top">Other Test</td>
+                            <td width="150" class="cell-center cell-border-left-bottom">VALVE SERIAL Nos.</td>
+                            <td width="45" class="cell-center cell-border-left-bottom">QTY</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-border-bottom" height="100"></td>
+                            <td class="cell-center cell-border-left-bottom">{}</td>
+                            <td class="cell-center cell-border-left-bottom">{}</td>
+                            <td class="cell-center cell-border-left-bottom">{}</td>
+                            <td class="cell-center cell-border-left-bottom">{}</td>
+                            <td class="cell-center cell-border-left-bottom">{}</td>
+                            <td class="cell-center cell-border-left-bottom">{}</td>
+                            <td class="cell-center cell-border-left-bottom">{}</td>
+                            <td class="cell-center cell-border-left-bottom">{}</td>
+                            <td class="cell-center cell-border-left-bottom">{}</td>
+                            <td class="cell-center cell-border-left-bottom">{}</td>
+                            <td class="cell-center cell-border-left-bottom">{}</td>
+                            <td class="cell-center cell-border-left-bottom">{}</td>
+                            <td class="cell-center cell-border-left-bottom">{SERIAL_NUMBERS}</td>
+                            <td class="cell-center cell-border-left-bottom">{}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-bottom:5px;padding-top:5px;border-bottom:1px 1px solid black">
+                    TOTAL NUMBER OF VALVES {}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-bottom:5px;padding-top:5px;">
+                    Certified that the particulars enterned herein by us are correct. The part has been designed and constructed to comply with the Indian Boiler
+                    Regulations 1950 for a maximum working pressure of <u>{}</u> Kg/cm<sup>2</sup> and maximum temperature of {} °C and
+                    satisfactory withstood a Hydraulic test using water or kerosene with any other suitable liquid to a pressure of {} Kg/cm<sup>2</sup>
+                    on the {} in the presence of our responsible representative whose signature is appended hereunder.
+                </td>
+            </tr>
+            <tr>
+                <td width="50%" class="cell-center" height="100">
+                    QA Manager Sign
+                </td>
+                <td class="cell-center">
+                    Production Manager Sign
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="cell-border-bottom" style="border-top:1px solid black;padding-bottom:5px; padding-top:5px;">
+                    IDENTIFICATION MARK:<br /><br />
+                    The parts have been stempted with inspecting a Authority's official Stamp thus:
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-bottom:3px; padding-top: 5px;">
+                    We have satisfied ourselves tha the valve has been constructed and tested in accordance with the requirements of the <b>INDIAN BOILER REGULATIONS, 1950</b>.
+                    We furhter certify that the particulars entered herein are correct.
+                </td>
+            </tr>
+            <tr>
+                <td class="cell-center" height="100">
+                    Local IBR Sign
+                </td>
+                <td class="cell-center">
+                    Reginal IBR Sign
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="font-size: 12px; border-top: 1px solid black; padding-bottom:3px; padding-top: 5px;" >
+                    Note: In the case of valve chest made and tested by well-known Foundaries or Forges recognized by the Central Boilers Board
+                    in the manner as laid down in regulation 4A to 4H. particulars ragarding the material as certified by them, in any Form III F / Form III G & Form IV,
+                    shall be noted in the appropriate columns or paragraphs in the certificates and in case of certificates from well-known Foundries or
+                    Forges is produced, such certificates may be accepted in lieu of the Certificate from inspecting authority in so far as it relates to the testing of material specified in the Form.
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
